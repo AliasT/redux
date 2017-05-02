@@ -17,6 +17,6 @@ export default function compose(...funcs) {
   if (funcs.length === 1) {
     return funcs[0]
   }
-
+  // 上面注释明确写了是单参数函数compose
   return funcs.reduce((a, b) => (...args) => a(b(...args)))
 }
